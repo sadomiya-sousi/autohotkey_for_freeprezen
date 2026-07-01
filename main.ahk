@@ -7,13 +7,6 @@ Persistent()
 ; --- システム設定 ---
 A_MaxHotkeysPerInterval := 500
 
-; 管理者権限の再起動処理
-if !A_IsAdmin {
-    try {
-        Run('*RunAs "C:\Users\sou\scoop\apps\autohotkey\2.0.21\v2\AutoHotkey64.exe" /restart "C:\Users\sou\.config\autohotkey\main.ahk"')
-    }
-    ExitApp
-}
 compileTime := FormatTime(A_Now, "yyyyMMdd_HHmmss")
 MsgBox "起動しました。`nコンパイル目安時刻: " compileTime
 
